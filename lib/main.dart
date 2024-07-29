@@ -15,16 +15,48 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Stack(
-        alignment: AlignmentDirectional.center,
+      home: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            color: Colors.purple,
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: Colors.purple,
+                width: 100,
+                height: 100,
+              ),
+              Container(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                width: 50,
+                height: 50,
+              )
+            ],
           ),
-          Container(
-            color: Colors.black,
-            width: 100,
-            height: 100,
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                width: 100,
+                height: 100,
+              ),
+              Container(
+                color: Colors.purple,
+                width: 50,
+                height: 50,
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(color: Colors.cyan, height: 50, width: 50,),
+              Container(color: Colors.pinkAccent, height: 50, width: 50,),
+              Container(color: Colors.yellow, height: 50, width: 50,),
+            ],
           ),
         ],
       ),
